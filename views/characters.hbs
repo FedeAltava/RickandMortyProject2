@@ -1,0 +1,16 @@
+<h1>Characters</h1>
+<button type="button" class="btn btn-secondary">Next</button>
+{{#each charactersInfo }}
+<div class="card" style="width: 18rem;">
+  <img src="{{image}}" class="card-img-top" alt="{{name}}">
+  <div class="card-body" col>
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">status: {{status}}</p>
+    <p class="card-text">species: {{species}}</p>
+    <p class="card-text">gender: {{gender}}</p>
+    <p class="card-text">origin: {{origin.name}}</p>
+    <a href="#" class="btn btn-primary">Profile</a>
+    <button type="button" class="btn btn-success">favourite</button>
+  </div>
+</div>
+{{/each}}

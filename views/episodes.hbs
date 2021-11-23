@@ -1,0 +1,29 @@
+<h1>Episodes</h1>
+
+<button type="button" class="btn btn-info"><a href="/episodes/1">Season 1</a></button>
+<button type="button" class="btn btn-info"><a href="/episodes/2">Season 2</a></button>
+<button type="button" class="btn btn-info"><a href="/episodes/3">season 3</a></button>
+
+ 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Air-Date</th>
+      <th scope="col">Episode</th>
+      <th scope="col">Created</th>
+    </tr>
+  </thead>
+  {{#each episodesInfo}}
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{name}}</td>
+      <td>{{air_date}}</td>
+      <td>{{episode}}</td>
+      <td>{{created}}  <button type="button" class="btn btn-success">favourite</button></td>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>
