@@ -6,7 +6,9 @@ const characterSchema = new Schema(
       status: { type: String },
       species: { type: String },
       gender: { type: String },
-      origin: { type: {String} },
+      origin: { type: {} },
+      image: {type:String},
+      location:{type:{}}
       
       
     },

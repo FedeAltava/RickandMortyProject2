@@ -8,7 +8,7 @@ const User = require("../models/User.model");
 //middleware
 const isLoggedIn = require("../middleware/isLoggedIn")
 router.get("/:page", isLoggedIn, async (req, res) => {
-  console.log(req.params.page)
+ 
     try {
       const axiosCall = await axios(
         `https://rickandmortyapi.com/api/episode?page=${req.params.page}`

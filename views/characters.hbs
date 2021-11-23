@@ -1,5 +1,7 @@
 <h1>Characters</h1>
-<button type="button" class="btn btn-secondary">Next</button>
+<button type="button" class="btn btn-info"><a href="/characters/1">Page 1</a></button>
+<button type="button" class="btn btn-info"><a href="/characters/2">Page 2</a></button>
+<button type="button" class="btn btn-info"><a href="/characters/3">Page 3</a></button>
 {{#each charactersInfo }}
 <div class="card" style="width: 18rem;">
   <img src="{{image}}" class="card-img-top" alt="{{name}}">
@@ -9,8 +11,10 @@
     <p class="card-text">species: {{species}}</p>
     <p class="card-text">gender: {{gender}}</p>
     <p class="card-text">origin: {{origin.name}}</p>
-    <a href="#" class="btn btn-primary">Profile</a>
-    <button type="button" class="btn btn-success">favourite</button>
+    <form method="POST" action="/characters/favorite/{{id}}">
+      <button type="submit" class="btn btn-success">favorite</button>
+    </form>
+    
   </div>
 </div>
 {{/each}}

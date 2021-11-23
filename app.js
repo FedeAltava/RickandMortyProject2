@@ -36,6 +36,9 @@ app.use("/characters",characterRoutes );
 const episodesRoutes = require("./routes/episodes.js")
 app.use("/episodes",episodesRoutes );
 
+const userRoutes = require("./routes/user")
+app.use("/user",userRoutes  );
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
