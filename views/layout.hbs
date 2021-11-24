@@ -22,11 +22,14 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link white" href="/">Home</a>
-      <a class="nav-item nav-link white" href="/auth/login">Log In</a>
       <a class="nav-item nav-link white" href="/auth/signup">Sign Up</a>
       <a class="nav-item nav-link white" href="/characters/1">Characters</a>
       <a class="nav-item nav-link white" href="/episodes/1">Episodes</a>
+      {{#if session.loggedUser }}
       <a class="nav-item nav-link white" href="/auth/logout">Log out</a>
+        {{else}}
+        <a class="nav-item nav-link white" href="/auth/login">Log In</a>
+         {{/if}}
       <a class="nav-item nav-link white" href="/user/userProfile">Profile</a>
     </div>
   </div>

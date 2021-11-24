@@ -21,7 +21,7 @@ router.get("/:page", isLoggedIn, async (req, res) => {
     }
   });
 
-router.post('/favorite/:id', async(req,res)=>{
+router.post('/favorite/:id',isLoggedIn, async(req,res)=>{
 
 const axiosCall = await axios(`https://rickandmortyapi.com/api/character/${req.params.id}`)
 const infoFavoriteCharacter = axiosCall.data
@@ -38,13 +38,13 @@ const dataToUpLoad ={
 } 
 
 const createCharacter = await Character.create(dataToUpLoad)
-console.log(createCharacter._id)
 
-await User.findByIdAndUpdate(req.session.user._id,
+
+const favoriteCharacterUpdate = await User.findByIdAndUpdate(req.session.user._id,
   {$push:{favorites:createCharacter._id}},
-  {new:true});
+  {new:true}).populate("favorites");
 
-  res.render('./userProfile',)
+  res.render('./userProfile',{favoriteCharacterUpdate})
 })
 
 

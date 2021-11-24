@@ -91,14 +91,3 @@ form input {
   object-fit: left;
 }
 
-.modal img {
-  width: 150px;
-  margin-bottom: 15px;
-  border: 1px solid black;
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
