@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 
-router.get("/userProfile", (req, res, next) => {
+router.get("/user", (req, res, next) => {
   res.render("userProfile");
 });
 

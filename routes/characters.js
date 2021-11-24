@@ -2,11 +2,13 @@ const router = require("express").Router();
 
 const axios = require("axios");
 
-const Character = require("../models/Character.model");
-const User = require("../models/User.model");
+
 
 //middleware
 const isLoggedIn = require("../middleware/isLoggedIn")
+const Character = require("../models/Character.model");
+const User = require("../models/User.model");
+//takes character from api
 router.get("/:page", isLoggedIn, async (req, res) => {
     try {
       const axiosCall = await axios(
@@ -20,7 +22,7 @@ router.get("/:page", isLoggedIn, async (req, res) => {
       console.log(err);
     }
   });
-
+//add character to favorites
 router.post('/favorite/:id',isLoggedIn, async(req,res)=>{
 
 const axiosCall = await axios(`https://rickandmortyapi.com/api/character/${req.params.id}`)
@@ -45,7 +47,24 @@ const favoriteCharacterUpdate = await User.findByIdAndUpdate(req.session.user._i
   {new:true}).populate("favorites");
 
   res.render('./userProfile',{favoriteCharacterUpdate})
+});
+
+//Delete character from favorites
+router.post('/favorite/:id/delete', async(req,res)=>{
+
+try{
+  const favoriteCharacterUpdate = await User.findByIdAndDelete(req.session.user._id)
+console.log(favoriteCharacterUpdate)
+res.redirect('./userProfile')
+}catch(err){
+
+  console.log(err)
+}
+
+
+
 })
+
 
 
   module.exports = router;

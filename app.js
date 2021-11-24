@@ -39,12 +39,12 @@ app.use("/episodes",episodesRoutes );
 const userRoutes = require("./routes/user")
 app.use("/character",userRoutes  );
 
-app.use((req, res, next) => {
-    if (req.session.loggedUser) {
-      res.locals.session = req.session
-    }
-    next()
-  })
+// app.use((req, res, next) => {
+//     if (req.session.loggedUser) {
+//       res.locals.session = req.session
+//     }
+//     next()
+//   })
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
