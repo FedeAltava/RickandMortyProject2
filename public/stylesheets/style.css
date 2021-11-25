@@ -1,6 +1,5 @@
 body {
-  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,
-    sans-serif;
+  font-family: 'Creepster', cursive;
     background-color: rgb(98, 164, 171);
 }
 
@@ -122,4 +121,13 @@ margin-left: 25%;
 .firstButton{
 
   margin-left: 2%;
+}
+.inputStyle{
+border-radius: 10px;
+border:2px solid black;
+padding: 4%;
+}
+.logAndSign{
+margin-right: 4%;
+
 }
