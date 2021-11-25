@@ -16,7 +16,7 @@ router.get("/:page", isLoggedIn, async (req, res) => {
       
       const episodesInfo = axiosCall.data.results; 
       
-      res.render("./episodes", { episodesInfo });
+      res.render("./episodes/episodes", { episodesInfo });
     } catch (err) {
       console.log(err);
     }

@@ -24,27 +24,17 @@ const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowe
 app.locals.title = `${capitalized(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
-const index = require("./routes/index");
-app.use("/", index);
 
-const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
+app.use("/", require("./routes/index"));
 
-const characterRoutes = require("./routes/characters.js")
-app.use("/characters",characterRoutes );
+app.use("/auth", require("./routes/auth"));
 
-const episodesRoutes = require("./routes/episodes.js")
-app.use("/episodes",episodesRoutes );
+app.use("/characters",require("./routes/characters.js") );
 
-const userRoutes = require("./routes/user")
-app.use("/character",userRoutes  );
+app.use("/episodes",require("./routes/episodes.js") );
 
-// app.use((req, res, next) => {
-//     if (req.session.loggedUser) {
-//       res.locals.session = req.session
-//     }
-//     next()
-//   })
+app.use("/user",require("./routes/user")  );
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
