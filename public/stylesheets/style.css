@@ -1,6 +1,7 @@
 body {
-  font-family: "Marvel", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,
     sans-serif;
+    background-color: rgb(98, 164, 171);
 }
 
 .white {
@@ -23,16 +24,13 @@ body {
   color: #f0e008;
 }
 
-.marvel-logo {
+.rickandmortylogo {
   width: 90px;
 }
 
-.marvel-red {
-  color: #ed1d24;
-}
-
-.marvel-red-bg {
-  background-color: rgb(98, 164, 171);
+.color-background-bg {
+  
+  background-color: rgb(20, 13, 17)
 }
 .navbar-light .navbar-nav .nav-link {
   color: white;
@@ -49,12 +47,14 @@ form input {
 }
 
 .btn{
-    color: white;
+    color: rgb(10, 6, 6);
     border-color: white;
+    margin-bottom: 2%;
+    background-color: rgba(151,206,76);
 }
 .btn:hover{
-    background-color: rgba(255, 0, 0, 0.548);
-    color:white;
+    background-color: rgba(240,225,74);
+    color:rgb(12, 1, 1);
 }
 
 
@@ -91,3 +91,19 @@ form input {
   object-fit: left;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+.btn-danger{
+  color: black;
+
+}
+.card{
+  margin: 1%;
+  border-color: black;
+}
+.redbtn{
+  background-color: rgb(241, 79, 14)
+
+}

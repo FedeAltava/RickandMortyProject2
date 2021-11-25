@@ -12,9 +12,9 @@
    </head>
 
    <body>
-<nav class="navbar navbar-expand-lg navbar-light marvel-red-bg">
+<nav class="navbar navbar-expand-lg navbar-light color-background-bg">
   <a class="navbar-brand white fw-bold" href="#">
-    <img class="marvel-logo" src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="Marvel Logo">
+    <img class="rickandmortylogo" src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="RickandMorty Logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,11 +26,12 @@
       <a class="nav-item nav-link white" href="/episodes/1">Episodes</a>
       {{#if session.user }}
       <a class="nav-item nav-link white" href="/auth/logout">Log out</a>
+      <a class="nav-item nav-link white" href="/user/profile">Profile</a>
         {{else}}
         <a class="nav-item nav-link white" href="/auth/signup">Sign Up</a>
         <a class="nav-item nav-link white" href="/auth/login">Log In</a>
          {{/if}}
-      <a class="nav-item nav-link white" href="/user/profile">Profile</a>
+      
     </div>
   </div>
 </nav>
