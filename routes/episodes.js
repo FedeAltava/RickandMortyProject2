@@ -5,7 +5,8 @@ const axios = require("axios");
 const Character = require("../models/Character.model");
 const User = require("../models/User.model");
 
-//middleware
+
+//take episodes from api
 const isLoggedIn = require("../middleware/isLoggedIn")
 router.get("/:page", isLoggedIn, async (req, res) => {
  

@@ -44,7 +44,7 @@ router.post('/favorite/:id', isLoggedIn, async (req, res) => {
     { $push: { favorites: createCharacter._id } },
     { new: true },
   ).populate('favorites')
-
+res.redirect("/characters/1")
   res.render('./user/profile', { favoriteCharacterUpdate })
 })
 
