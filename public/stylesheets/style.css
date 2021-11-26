@@ -166,5 +166,12 @@ margin-right: 4%;
     
     
     }
-
-  
+    @media(max-width: 375px){
+      .firstButton{
+      
+        margin-left: 12%;
+      }
+      
+      
+      }
+    
