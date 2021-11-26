@@ -149,3 +149,22 @@ margin-right: 4%;
 
 
 }
+
+@media(max-width: 375px){
+  .container{
+  
+    padding-left: 15%;
+  }
+  
+  
+  }
+  @media(max-width: 375px){
+    .espisodeInvi{
+    
+      display: none;
+    }
+    
+    
+    }
+
+  
