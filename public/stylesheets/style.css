@@ -151,12 +151,21 @@ margin-right: 4%;
 }
 
 @media(max-width: 375px){
-  .container{
-  
-    padding-left: 13%;
+  .row{
+    margin-top: 0;
+    padding-left: 3%;
+    
   }
   
   
+  }
+
+  @media(max-width: 375px){
+    .container{
+    
+      padding-left: 13%;
+      
+    }
   }
   @media(max-width: 768px){
     .container{
