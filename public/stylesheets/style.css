@@ -1,6 +1,7 @@
 body {
   font-family: 'Creepster', cursive;
     background-color: rgb(98, 164, 171);
+  
 }
 
 .white {
@@ -98,7 +99,7 @@ a{
 
 }
 .card{
-  margin: 2%;
+  margin: 1%;
   border:2px solid black;
 }
 .redbtn{
@@ -113,6 +114,7 @@ margin-left: 25%;
   border:2px solid black;
   border-radius: 8px;
   margin-top:5%;
+
 }
 #carouselExampleControls img{
 
@@ -129,5 +131,21 @@ padding: 4%;
 }
 .logAndSign{
 margin-right: 4%;
+}
+.container{
+  justify-content: center;
+  align-items: center;
+  
+}
+.row{
+  margin-top: 0;
+}
+
+@media(max-width: 1000px){
+.rickLogo{
+
+  display: none;
+}
+
 
 }
